@@ -6,3 +6,9 @@
 #
 # Pods/
 
+# Xcode
+xcuserdata
+*.xcworkspace
+
+# Mac
+.DS_Store
