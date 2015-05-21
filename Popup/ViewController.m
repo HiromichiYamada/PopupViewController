@@ -23,13 +23,8 @@
 {
   [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
   self.popupViewController = [[PopupViewController alloc] init];
-  [self addChildViewController:self.popupViewController];
-  [self.popupViewController didMoveToParentViewController:self];
-  
-  //
-  //self.popupViewController.view.backgroundColor = [UIColor redColor];
-  
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,6 +35,9 @@
 
 - (IBAction)popup:(id)sender
 {
+	[self addChildViewController:self.popupViewController];
+	[self.popupViewController didMoveToParentViewController:self];
+	
   [self.view addSubview:self.popupViewController.view];
   
   CGPoint center = self.popupViewController.contentView.center;

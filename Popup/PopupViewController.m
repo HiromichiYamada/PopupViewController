@@ -45,6 +45,7 @@
                    }
                    completion:^(BOOL finished){
                      [self.view removeFromSuperview];
+										 [self removeFromParentViewController];
                      self.view.alpha = 1.f;
                    }];
 }
